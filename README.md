@@ -2,15 +2,20 @@
 
 Listagem e visualização de Pokémons
 
-## Getting Started
+## Sobre o aplicativo
 
-This project is a starting point for a Flutter application.
+Este porjeto é uma aplicação desenvolvida utilizando Flutter onde o objetivo é a listagem e 
+visualização de pokémons
 
-A few resources to get you started if this is your first Flutter project:
+Pacotes utilizados:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- [GetX](https://pub.dev/packages/get)
+- [Http](https://pub.dev/packages/http)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Neste projeto também foi utilizado a API do **pokeapi.co** para obter os detalhes dos pokémons.
+
+## Prints
+
+![Página Inicial](imgs/img1.png)
+
+![Detalhes do Pokémon](imgs/img2.png)
