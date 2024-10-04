@@ -19,9 +19,13 @@ class PokemonDetailView extends GetView<PokemonDetailController> {
                 ),
                 body: ListView(
                   children: [
+                    Image.network(
+                      state.imageUrl,
+                      filterQuality: FilterQuality.none,
+                      scale: 0.1,
+                    ),
                     Card.filled(
                       child: ListTile(
-                        leading: Image.network(state.imageUrl),
                         title: Text('Nº na pokedex: ${state.pokedexNumber}'),
                         subtitle: Text('Peso: ${state.weight}'),
                       ),
