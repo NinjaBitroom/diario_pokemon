@@ -11,7 +11,7 @@ class PokemonListView extends GetView<PokemonListController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Diário de Pokemon'),
+        title: const Text('Diário de Pokemon'),
       ),
       body: controller.obx(
         (state) => ListView.builder(
@@ -25,7 +25,7 @@ class PokemonListView extends GetView<PokemonListController> {
                 Get.to(() {
                   final pokemonDetailController = Get.find<PokemonDetailController>();
                   pokemonDetailController.updatepokemon(state[index]);
-                  return PokemonDetailView();
+                  return const PokemonDetailView();
                 });
               },
             ),

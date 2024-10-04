@@ -1,3 +1,4 @@
+import 'package:diario_pokemon/utils/initial_biding.dart';
 import 'package:diario_pokemon/views/pokemon_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -23,6 +24,7 @@ class App extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
+      initialBinding: InitialBiding(),
       home: const PokemonListView(),
     );
   }
