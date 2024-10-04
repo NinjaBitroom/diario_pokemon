@@ -17,11 +17,13 @@ class PokemonListController extends GetxController
     for (final r in responseBody["results"]) {
       final pokemonUrl = Uri.parse(r['url']);
       final pokemonResponse = await http.get(pokemonUrl);
-      final pokemonResponseBody = jsonDecode(utf8.decode(pokemonResponse.bodyBytes));
+      final pokemonResponseBody =
+          jsonDecode(utf8.decode(pokemonResponse.bodyBytes));
 
       final speciesUrl = Uri.parse(pokemonResponseBody['species']['url']);
       final speciesResponse = await http.get(speciesUrl);
-      final speciesResponseBody = jsonDecode(utf8.decode(speciesResponse.bodyBytes));
+      final speciesResponseBody =
+          jsonDecode(utf8.decode(speciesResponse.bodyBytes));
 
       final pokemonTypes = <String>[];
       for (final type in pokemonResponseBody['types']) {
@@ -35,7 +37,8 @@ class PokemonListController extends GetxController
 
       pokemons.add(PokemonModel(
         name: r['name'],
-        pokedexNumber: speciesResponseBody['pokedex_numbers'][0]['entry_number'],
+        pokedexNumber: speciesResponseBody['pokedex_numbers'][0]
+            ['entry_number'],
         imageUrl: pokemonResponseBody['sprites']['front_default'],
         types: pokemonTypes,
         abilities: pokemonAbilities,
