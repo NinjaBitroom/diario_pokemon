@@ -43,6 +43,7 @@ class PokemonListController extends GetxController
         types: pokemonTypes,
         abilities: pokemonAbilities,
         weight: pokemonResponseBody['weight'],
+        color: speciesResponseBody['color']['name'],
       ));
     }
     change(pokemons, status: RxStatus.success());

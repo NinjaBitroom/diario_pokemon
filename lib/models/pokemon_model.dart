@@ -5,6 +5,7 @@ class PokemonModel {
   final List<String> types;
   final List<String> abilities;
   final int weight;
+  final String color;
 
   PokemonModel({
     required this.name,
@@ -13,5 +14,6 @@ class PokemonModel {
     required this.types,
     required this.abilities,
     required this.weight,
+    required this.color,
   });
 }
