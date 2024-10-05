@@ -4,18 +4,19 @@ import 'package:get/get.dart';
 
 class PokemonListController extends GetxController
     with StateMixin<List<PokemonModel>> {
-  final pokeApiCoConnect = Get.find<PokeApiCoConnect>();
+  final _pokeApiCoConnect = Get.find<PokeApiCoConnect>();
+
   @override
   Future<void> onInit() async {
     super.onInit();
     change(null, status: RxStatus.loading());
 
-    final response = await pokeApiCoConnect.getPokemons();
+    final response = await _pokeApiCoConnect.getPokemons();
     final pokemons = <PokemonModel>[];
 
     for (final r in response.body!) {
-      final pokemonResponse = await pokeApiCoConnect.getPokemon(r.url);
-      final speciesResponse = await pokeApiCoConnect.getPokemonSpecies(
+      final pokemonResponse = await _pokeApiCoConnect.getPokemon(r.url);
+      final speciesResponse = await _pokeApiCoConnect.getPokemonSpecies(
         pokemonResponse.body!.speciesUrl,
       );
 
