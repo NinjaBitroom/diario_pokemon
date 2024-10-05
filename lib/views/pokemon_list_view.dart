@@ -1,4 +1,3 @@
-import 'package:diario_pokemon/controllers/pokemon_detail_controller.dart';
 import 'package:diario_pokemon/controllers/pokemon_list_controller.dart';
 import 'package:diario_pokemon/views/pokemon_detail_view.dart';
 import 'package:flutter/material.dart';
@@ -22,12 +21,7 @@ class PokemonListView extends GetView<PokemonListController> {
               title: Text(state[index].name),
               subtitle: Text('Nº na pokedex: ${state[index].pokedexNumber}'),
               onTap: () {
-                Get.to(() {
-                  final pokemonDetailController =
-                      Get.find<PokemonDetailController>();
-                  pokemonDetailController.updatepokemon(state[index]);
-                  return const PokemonDetailView();
-                });
+                Get.to(() => PokemonDetailView(state[index]));
               },
             ),
           ),

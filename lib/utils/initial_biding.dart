@@ -1,4 +1,3 @@
-import 'package:diario_pokemon/controllers/pokemon_detail_controller.dart';
 import 'package:diario_pokemon/controllers/pokemon_list_controller.dart';
 import 'package:diario_pokemon/services/poke_api_co_connect.dart';
 import 'package:get/get.dart';
@@ -8,6 +7,5 @@ class InitialBiding extends Bindings {
   void dependencies() {
     Get.put(PokeApiCoConnect());
     Get.put(PokemonListController());
-    Get.put(PokemonDetailController());
   }
 }
